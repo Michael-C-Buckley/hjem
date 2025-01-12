@@ -5,9 +5,12 @@
 
   outputs = { hjem, ...}: {
     nixosModules.minimal = import ./hjem/minimal.nix { inherit hjem; };
-    nixosModules.default = import [
-      ./hjem/minimal.nix { inherit hjem; }
-      ./hjem/desktop.nix
-    ];
+
+    nixosModules.default = { ... }: {
+      imports = [
+        (import ./hjem/minimal.nix { inherit hjem; })
+        (import ./hjem/desktop.nix)
+      ];
+    };
   };
 }
