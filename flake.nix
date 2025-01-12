@@ -5,6 +5,6 @@
 
   outputs = { hjem, ...}: {
     nixosModules.default = import ./hjem/desktop.nix { inherit hjem; };
-    nixosModules.server = import ./hjem { inherit hjem; };
+    nixosModules.minimal = import ./hjem/minimal.nix { inherit hjem; };
   };
 }

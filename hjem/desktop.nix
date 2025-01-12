@@ -2,7 +2,7 @@
 { hjem, ... }:
 {
   imports = [
-    ./default.nix {inherit hjem; }
+    ./minimal.nix {inherit hjem; }
   ];
   hjem.users.michael.files = {
     "ghostty/config".source = ./userfiles/ghostty;
