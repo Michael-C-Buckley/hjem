@@ -3,7 +3,7 @@
 
   inputs.hjem.url = "github:feel-co/hjem";
 
-  outputs = {...}: {
-    nixosModules.default = import ./hjem;
+  outputs = { hjem, ...}: {
+    nixosModules.default = import ./hjem { inherit hjem; };
   };
 }
