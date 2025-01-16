@@ -8,8 +8,8 @@
 in {
   hjem.users.michael = {
     files = {
-      ".config/resources/geometry.zsh".source = "${geometry-zsh}/geometry.zsh";
-      # ".zshrc".source = ./default.zshrc;
+      ".config/resources/geometry".source = "${geometry-zsh}";
+      ".zshrc".source = ./default.zshrc;
     };
   };
 }
