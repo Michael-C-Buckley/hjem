@@ -18,8 +18,13 @@ export LC_ALL="en_US.UTF-8"
 # -----------------------------
 
 # Source the Geometry Zsh prompt
-export GEOMETRY_PROMPT_PLUGINS=(hostname git exec_time)
-export GEOMETRY_COLOR_HOSTNAME="$(geometry::hostcolor)"
+export PROMPT_GEOMETRY_COLORIZE_SYMBOL=true
+export PROMPT_GEOMETRY_EXEC_TIME=true
+export GEOMETRY_TIME_NEUTRAL='yellow'
+export GEOMETRY_PLUGIN_SEPARATOR=' '
+
+export GEOMETRY_PROMPT_PLUGINS_PRIMARY=(path hostname)
+export GEOMETRY_PROMPT_PLUGINS_SECONDARY=(exec_time git)
 source "$HOME/.config/resources/geometry.zsh"
 
 # -----------------------------
