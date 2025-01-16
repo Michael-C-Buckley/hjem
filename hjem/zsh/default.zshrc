@@ -19,6 +19,7 @@ export LC_ALL="en_US.UTF-8"
 
 # Source the Geometry Zsh prompt
 source "$HOME/.config/resources/geometry.zsh"
+GEOMETRY_COLOR_HOSTNAME="%F{$(geometry::hostcolor)}"
 
 # -----------------------------
 # Zsh Options
