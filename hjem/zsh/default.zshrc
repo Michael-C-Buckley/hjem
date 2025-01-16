@@ -23,9 +23,10 @@ export PROMPT_GEOMETRY_EXEC_TIME=true
 export GEOMETRY_TIME_NEUTRAL='yellow'
 export GEOMETRY_PLUGIN_SEPARATOR=' '
 
-export GEOMETRY_PROMPT=(geometry_path geometry_hostname)
+export GEOMETRY_PROMPT=(geometry_status geometry_path)
 export GEOMETRY_PROMPT_PLUGINS_PRIMARY=(path hostname)
 export GEOMETRY_PROMPT_PLUGINS_SECONDARY=(exec_time git)
+GEOMETRY_SYMBOL_PROMPT="▲"
 source "$HOME/.config/resources/geometry.zsh"
 export GEOMETRY_COLOR_HOSTNAME="$(geometry::hostcolor)"
 
