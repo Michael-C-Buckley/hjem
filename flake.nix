@@ -4,12 +4,12 @@
   inputs.hjem.url = "github:feel-co/hjem";
 
   outputs = { hjem, ...}: {
-    nixosModules.minimal = import ./hjem/minimal.nix { inherit hjem; };
+    nixosModules.minimal = import ./default.nix { inherit hjem; };
 
     nixosModules.default = { ... }: {
       imports = [
-        (import ./hjem/minimal.nix { inherit hjem; })
-        (import ./hjem/desktop.nix)
+        (import ./default.nix { inherit hjem; })
+        (import ./files/desktop.nix)
       ];
     };
   };
